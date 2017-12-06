@@ -36,10 +36,24 @@ class RouteServiceProvider extends ServiceProvider
     public function map()
     {
         $this->mapApiRoutes();
-
+        $this->mapBotRoutes();
         $this->mapWebRoutes();
 
         //
+    }
+
+
+    /**
+     * Define the "bot" routes for the application.
+     *
+     * These routes all receive session state, CSRF protection, etc.
+     *
+     * @return void
+     */
+    protected function mapBotRoutes()
+    {
+        Route::namespace($this->namespace)
+             ->group(base_path('routes/bot.php'));
     }
 
     /**
