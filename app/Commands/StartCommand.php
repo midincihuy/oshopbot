@@ -11,6 +11,7 @@ class StartCommand extends Command
   protected $description = 'Start Command';
   public function handle($arguments)
   {
-    $this->replyWithMessage(['text' => 'coba lagi']);
+    $this->replyWithMessage(['text' => 'Welcome To OshopBot :)']);
+    $this->triggerCommand('help');
   }
 }

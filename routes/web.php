@@ -18,3 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/chat', 'CheckController@chat')->name('chat');
+Route::get('/tuser', 'CheckController@tuser')->name('tuser');
+Route::get('/update', 'CheckController@update')->name('update');
+Route::get('/absen', 'CheckController@absen')->name('absen');
