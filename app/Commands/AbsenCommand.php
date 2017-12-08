@@ -15,7 +15,7 @@ class AbsenCommand extends Command
   {
     $data = explode(' ', $arguments);
 
-    $name = isset($data[0]) ? $data[0] : "Hamidin";
+    $name = (isset($data[0]) && !empty($data[0])) ? $data[0] : "Hamidin";
     $checktype = isset($data[1]) ? (strtoupper($data[1]) == "IN" ? 0 : 1) : 0;
 
     $limit = isset($data[2]) ? $data[2] : 1;
