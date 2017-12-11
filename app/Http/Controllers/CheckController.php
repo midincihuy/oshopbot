@@ -14,21 +14,25 @@ use App\Webster;
 
 class CheckController extends Controller
 {
+  public function __construct()
+  {
+    $this->middleware('auth');
+  }
   public function chat()
   {
     $chat = Chat::all();
-    return $chat;
+    return view('check.chat')->with('chat', $chat);
   }
 
   public function update()
   {
-    $update = Update::all();
-    return $update;
+    $update = Update::paginate(2);
+    return view('check.update')->with('update', $update);
   }
   public function tuser()
   {
     $tuser = Tuser::all();
-    return $tuser;
+    return view('check.tuser')->with('tuser', $tuser);
   }
 
   public function absen()

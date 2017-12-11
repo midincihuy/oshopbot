@@ -1,4 +1,5 @@
-@extends('layouts.app')
+@extends('adminlte::login')
+{{-- @extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -66,4 +67,4 @@
         </div>
     </div>
 </div>
-@endsection
+@endsection --}}
